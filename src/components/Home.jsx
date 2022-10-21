@@ -8,10 +8,17 @@ import Header from "./Header";
 import Footer from "./Footer";
 
 
+
 const Home = () => {
+  
+
+
+  
   return (
     <>
+    
     <div>
+    <Header />
       <AppBar
         position="static"
         style={{
@@ -23,8 +30,9 @@ const Home = () => {
           // opacity: "0.6",
         }}
       >
+       
         <CssBaseline />
-        <Header />
+ 
         <Typography
           variant="h6"
           style={{

@@ -1,20 +1,16 @@
 import React from "react";
 import Card from "@mui/material/Card";
-
-import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 
-import Typography from "@mui/material/Typography";
 import NavigateBeforeIcon from "@mui/icons-material/NavigateBefore";
 import NavigateNextIcon from "@mui/icons-material/NavigateNext";
 import { useState } from "react";
 import { IconButton } from "@mui/material";
-// import Carousel from "./Carousel";
+
 
 function Pictures() {
-  const [current, setCurrent] = useState(0);
-  const [value, setValue] = useState(0);
 
+  const [value, setValue] = useState(0);
 
   const Sdata = [
     {
@@ -75,37 +71,32 @@ function Pictures() {
 
   const slideRight = () => {
     // setCurrent(current + 1);
-    value === 0
-    ? setValue(-100)
-    : setValue(value + 100);
-
+    value === 0 ? setValue(-100) : setValue(value + 100);
   };
 
   const slideLeft = () => {
     // setCurrent(current - 1);
 
-    value === -100 
-    ? setValue(0)
-    : setValue(value - 100);
+    value === -100 ? setValue(0) : setValue(value - 100);
   };
 
-
-
-
-  
   return (
     <div>
       <div style={{ display: "flex", alignItems: "center" }}>
-        <IconButton  id="slideLeft" onClick={slideLeft}>
+        <IconButton id="slideLeft" onClick={slideLeft}>
           <NavigateBeforeIcon />
         </IconButton>
 
- {/* < Carousel img={Sdata}/> */}
+        {/* < Carousel img={Sdata}/> */}
         {Sdata.map((e) => {
           return (
             <Card
-              sx={{ maxWidth: 345, borderRadius: "1em", margin: "40px 50px" }}
-              
+              sx={{
+                width: "100%",
+                maxWidth: "16%",
+                borderRadius: "1em",
+                margin: "3% 1.5%",
+              }}
             >
               <CardMedia
                 component="img"
@@ -116,19 +107,21 @@ function Pictures() {
                 sx={{ backgroundColor: "Grey" }}
               />
 
-              <CardContent>
+
+              {/* <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
                   {e.title}
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
                   {e.des}
                 </Typography>
-              </CardContent>
+              </CardContent> */}
             </Card>
           );
         })}
         <IconButton id="slideRight" onClick={slideRight}>
           <NavigateNextIcon />
+     
         </IconButton>
       </div>
     </div>

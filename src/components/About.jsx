@@ -23,7 +23,7 @@ const About = () => {
           style={{
             backgroundColor: "white",
             textAlign: "center",
-            width: "20%",
+            width: "280px",
             height: "250px",
             fontSize: "60px",
           }}
@@ -88,14 +88,14 @@ const About = () => {
 
       <Box
         sx={{
-          maxWidth: 345,
+
           display: "flex",
           flexDirection: "inherit",
-          margin: " 2% 40%",
+          margin: " 1% 42%",
           padding: "2%",
         }}
       >
-        <Avatar alt="photo" src="/img/photo.jpg" />
+        <Avatar alt="photo" src="/img/photo.jpg"  />
         <CardContent sx={{ padding: "0px 20px" }}>
           <Typography sx={{}}>
             <b>XYZ</b>

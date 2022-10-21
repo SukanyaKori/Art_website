@@ -16,7 +16,7 @@ const Footer = () => {
     >
       <Toolbar >
         <Typography variant="h4">Navbar </Typography>
-        <div style={{ display: "flex", marginLeft: "70%", color: "black" }}>
+        <div style={{ display: "flex", marginLeft: "100%", color: "black" }}>
           <Button
             component={Link}
             to="/"
